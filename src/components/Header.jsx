@@ -8,9 +8,9 @@ function Header() {
       </div>
 
       {/* 가운데: 이메일 */}
-      <a href='mailto:ysosob@naver.com' className='hidden sm:block text-base tracking-widest text-neutral-500 hover:text-neutral-900 transition-colors'>
+      <div className='hidden sm:block text-base tracking-widest text-neutral-500'>
         ysosob@naver.com
-      </a>
+      </div>
 
       {/* 우측: 상태 */}
       <div className='flex items-center gap-2'>

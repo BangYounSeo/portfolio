@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import heroImg from '../assets/방윤서_포트폴리오.png'
 
 // 공백까지 포함한 이름 배열을 상수로 통일
-const NAME = ['B', 'A', 'N', 'G', '\u00A0', 'Y', 'U', 'N', '\u00A0', 'S', 'E', 'O']
+const NAME = ['Y','u','n','S','e','o','\'','s','\u00A0','R','o','o','m']
 
 function Hero() {
   // visible 배열 대신 몇 글자까지 보일지 숫자로 관리
@@ -33,7 +33,7 @@ function Hero() {
           className='text-xs sm:text-sm tracking-[0.3em] text-teal-400 font-medium uppercase transition-opacity duration-700'
           style={{ opacity: visibleCount > 0 ? 1 : 0 }}
         >
-          Web Designer &amp; Publisher
+          Front-end &amp; Web Designer
         </p>
 
         <h1 className='text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-black text-neutral-900 leading-none text-center'>
