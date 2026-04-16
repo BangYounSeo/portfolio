@@ -2,7 +2,7 @@ import profileImg from '../assets/방윤서.jpg'
 import { Mail, GitBranch, MapPin } from 'lucide-react'
 
 const skillGroups = [
-  { category: 'Frontend', skills: ['JavaScript', 'React', 'TypeScript', 'Tailwind CSS', 'MUI'] },
+  { category: 'Frontend', skills: ['React', 'JavaScript', 'TypeScript', 'Tailwind CSS', 'MUI'] },
   { category: 'Backend',  skills: ['Java', 'Spring Boot', 'Spring Security', 'Node.js', 'Express', 'FastAPI'] },
   { category: 'Database', skills: ['OracleDB', 'MongoDB', 'MariaDB'] },
   { category: 'Design',   skills: ['Adobe Photoshop', 'Adobe Illustrator'] },
