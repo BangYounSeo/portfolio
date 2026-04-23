@@ -1,4 +1,10 @@
+import useScrollAnimation from '../hooks/useScrollAnimation'
+
 function Contact() {
+  const labelRef = useScrollAnimation()
+  const emailRef = useScrollAnimation()
+  const gridRef  = useScrollAnimation()
+
   return (
     <section id='contact' className='w-full'>
 
@@ -6,7 +12,7 @@ function Contact() {
       <div className='px-6 sm:px-12 md:px-20 py-24 sm:py-32'>
 
         {/* 섹션 레이블 */}
-        <p className='text-xs tracking-[0.3em] text-neutral-400 uppercase mb-6'>03 — Contact</p>
+        <p ref={labelRef} className='text-xs tracking-[0.3em] text-neutral-400 uppercase mb-6 fade-up'>03 — Contact</p>
 
         {/* 서브 타이틀 */}
         <p className='text-sm sm:text-base tracking-widest text-neutral-400 mb-4'>
@@ -20,12 +26,12 @@ function Contact() {
         </div>
 
         {/* 이메일 대형 텍스트 */}
-        <p className='block text-5xl sm:text-7xl lg:text-8xl font-black text-neutral-900 leading-none tracking-tighter mb-16 sm:mb-20 break-all'>
+        <p ref={emailRef} className='block text-5xl sm:text-7xl lg:text-8xl font-black text-neutral-900 leading-none tracking-tighter mb-16 sm:mb-20 break-all fade-up'>
           ysosob@naver.com
         </p>
 
         {/* 2단 그리드 설명 */}
-        <div className='grid grid-cols-1 sm:grid-cols-2 gap-10 sm:gap-16 border-t border-neutral-200 pt-10'>
+        <div ref={gridRef} className='grid grid-cols-1 sm:grid-cols-2 gap-10 sm:gap-16 border-t border-neutral-200 pt-10 fade-up'>
 
           {/* 좌측 */}
           <p className='text-sm sm:text-base text-neutral-500 leading-relaxed'>

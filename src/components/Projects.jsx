@@ -17,6 +17,7 @@ import baroFarmBa       from '../assets/projects/barofarm/BaroFarmBa.png'
 
 import { useState, useEffect, useCallback } from 'react'
 import { createPortal } from 'react-dom'
+import useScrollAnimation from '../hooks/useScrollAnimation'
 
 const projects = [
   {
@@ -493,6 +494,10 @@ function ProjectSlider() {
 
 
 function Projects() {
+  const headerPRef  = useScrollAnimation()
+  const headerH2Ref = useScrollAnimation()
+  const sliderRef   = useScrollAnimation()
+
   return (
     <section id='projects' className='w-full bg-gradient-to-b from-white to-neutral-100 py-20'>
       <div className='w-full px-6 sm:px-12 md:px-20'>
@@ -500,8 +505,8 @@ function Projects() {
         {/* 섹션 헤더 */}
         <div className='flex flex-col sm:flex-row sm:items-end sm:justify-between mb-8 sm:mb-10 border-b border-neutral-300 pb-6 gap-3'>
           <div>
-            <p className='text-xs tracking-[0.3em] text-neutral-400 uppercase mb-4'>02 — Work</p>
-            <h2 className='text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[6rem] font-black text-teal-400 leading-none tracking-tighter'>
+            <p ref={headerPRef} className='text-xs tracking-[0.3em] text-neutral-400 uppercase mb-4 fade-up'>02 — Work</p>
+            <h2 ref={headerH2Ref} className='text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[6rem] font-black text-teal-400 leading-none tracking-tighter fade-up'>
               Projects
             </h2>
           </div>
@@ -510,7 +515,9 @@ function Projects() {
           </p>
         </div>
 
-        <ProjectSlider />
+        <div ref={sliderRef} className='fade-up delay-1'>
+          <ProjectSlider />
+        </div>
 
       </div>
     </section>

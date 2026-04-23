@@ -3,3 +3,25 @@
 body {
   font-family: 'Noto Sans KR', 'Nunito', sans-serif;
 }
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.fade-up.delay-1  { transition-delay: 0.1s; }
+.fade-up.delay-2  { transition-delay: 0.2s; }
+.fade-up.delay-3  { transition-delay: 0.3s; }
+.fade-up.delay-5  { transition-delay: 0.5s; }
+.fade-up.delay-10 { transition-delay: 1.0s; }
+.fade-up.delay-12 { transition-delay: 1.2s; }
+.fade-up.delay-18 { transition-delay: 1.8s; }
+
+@media (max-width: 767px) {
+  .fade-up.delay-10 { transition-delay: 0.2s; }
+  .fade-up.delay-12 { transition-delay: 0.4s; }
+}

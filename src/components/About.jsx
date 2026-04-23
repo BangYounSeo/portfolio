@@ -1,38 +1,47 @@
 import profileImg from '../assets/방윤서.jpg'
 import { Mail, GitBranch, MapPin } from 'lucide-react'
+import useScrollAnimation from '../hooks/useScrollAnimation'
 
 const skillGroups = [
-  { category: 'Frontend', skills: ['React', 'JavaScript', 'TypeScript', 'Tailwind CSS', 'MUI'] },
-  { category: 'Backend',  skills: ['Java', 'Spring Boot', 'Spring Security', 'Node.js', 'Express', 'FastAPI'] },
+  { category: 'Frontend', skills: ['React', 'JavaScript', 'Tailwind CSS', 'MUI'] },
+  { category: 'Backend',  skills: ['Java', 'Spring Boot', 'FastAPI', 'Node.js'] },
+  { category: 'Data & AI', skills: ['Python', 'Streamlit'] },
   { category: 'Database', skills: ['OracleDB', 'MongoDB', 'MariaDB'] },
   { category: 'Design',   skills: ['Adobe Photoshop', 'Adobe Illustrator'] },
-  { category: 'DevOps',   skills: ['AWS S3', 'Git', 'Notion'] },
+  { category: 'DevOps & Tools', skills: ['AWS S3', 'Git'] },
 ]
 
 function About() {
+  const h2Ref       = useScrollAnimation(0.05)
+  const labelRef    = useScrollAnimation(0.15)
+  const profileRef  = useScrollAnimation(0.15)
+  const textInfoRef = useScrollAnimation(0.15)
+  const introRef    = useScrollAnimation(0.15)
+  const skillsRef   = useScrollAnimation(0.15)
+
   return (
-    <section id='about' className='w-full bg-white px-8 sm:px-12 md:px-20 py-24 md:py-32'>
+    <section id='about' className='w-full bg-white px-8 sm:px-12 md:px-20 pt-24 pb-12 md:py-32'>
       <div className='max-w-screen-2xl mx-auto'>
 
       {/* 본문 - 좌우 2단 */}
-      <div className='flex flex-col md:flex-row gap-6 sm:gap-8 md:gap-28 lg:gap-36'>
+      <div className='flex flex-col md:flex-row gap-16 sm:gap-16 md:gap-28 lg:gap-36'>
 
         {/* 왼쪽 - 섹션 헤더 + 프로필 카드 */}
         <div className='md:w-1/4 flex flex-col sm:flex-row md:flex-col items-center sm:items-start md:items-start gap-8'>
 
           {/* 섹션 헤더 */}
           <div className='w-full border-b border-neutral-200 pb-4 mb-6'>
-            <p className='text-xs tracking-[0.3em] text-neutral-400 uppercase mb-3 sm:mb-4'>
+            <p ref={labelRef} className='text-xs tracking-[0.3em] text-neutral-400 uppercase mb-3 sm:mb-4 fade-up delay-2'>
               01 — About Me
             </p>
 
-            <h2 className='text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black text-neutral-900 leading-none tracking-tighter'>
+            <h2 ref={h2Ref} className='text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black text-neutral-900 leading-none tracking-tighter fade-up'>
               About
             </h2>
           </div>
 
           {/* 사진 + 테두리 박스 */}
-          <div className='relative flex-shrink-0 self-center md:self-start'>
+          <div ref={profileRef} className='relative flex-shrink-0 self-center md:self-start fade-up delay-2'>
             <div className='absolute top-2 left-2 w-full h-full border border-neutral-300' />
             <img
               src={profileImg}
@@ -42,7 +51,7 @@ function About() {
           </div>
 
           {/* 텍스트 정보 */}
-          <div className='flex flex-col gap-4 text-center sm:text-left md:text-left mt-6'>
+          <div ref={textInfoRef} className='flex flex-col gap-4 text-center sm:text-left md:text-left mt-6 fade-up delay-3'>
 
             {/* 이름 */}
             <div className='flex flex-col gap-0.5 items-center sm:items-start md:items-start'>
@@ -82,10 +91,10 @@ function About() {
         </div>
 
         {/* 오른쪽 - 소개 + 스킬 */}
-        <div className='md:flex-1 min-w-0 flex flex-col gap-16 md:gap-0 md:justify-between md:pt-12'>
+        <div className='md:flex-1 min-w-0 flex flex-col gap-8 md:gap-0 md:justify-between md:pt-12'>
 
           {/* 소개글 */}
-          <div className='flex flex-col gap-4'>
+          <div ref={introRef} className='flex flex-col gap-4 mt-6 md:mt-0 fade-up delay-10'>
             <p className='text-2xl font-bold text-neutral-700 leading-relaxed'>
               보이는 것부터 동작하는 것까지, 사용자의 경험을 만듭니다.
             </p>
@@ -102,7 +111,7 @@ function About() {
           </div>
 
           {/* 스킬 */}
-          <div className='flex flex-col gap-5 mt-8'>
+          <div ref={skillsRef} className='flex flex-col gap-5 mt-8 fade-up delay-12'>
             <div className='flex items-center gap-4 mb-4'>
               {/* Skills 헤딩에만 민트 포인트 */}
               <span className='text-3xl font-black text-teal-400'>Skills</span>
