@@ -6,7 +6,7 @@ function Contact() {
   const gridRef  = useScrollAnimation()
 
   return (
-    <section id='contact' className='w-full'>
+    <section id='contact' className='w-full bg-white'>
 
       {/* 메인 콘텐츠 */}
       <div className='px-6 sm:px-12 md:px-20 py-24 sm:py-32'>
@@ -21,8 +21,8 @@ function Contact() {
 
         {/* 문장 3개 */}
         <div className='mb-10 sm:mb-12'>
-          <p className='text-sm md:text-base text-teal-400 mb-2'>밝은 태도와 원활한 소통으로 팀의 흐름을 함께 만들어갑니다.</p>
-          <p className='text-sm md:text-base text-teal-400 mb-2'>맡은 일은 끝까지, 함께하는 과정은 유쾌하게! 디자인 감각과 책임감으로 프로젝트의 처음부터 끝까지 함께합니다.</p>
+          <p className='text-sm md:text-base text-neutral-900 mb-2'>밝은 태도와 원활한 소통으로 팀의 흐름을 함께 만들어갑니다.</p>
+          <p className='text-sm md:text-base text-neutral-900 mb-2'>맡은 일은 끝까지, 함께하는 과정은 유쾌하게! 디자인 감각과 책임감으로 프로젝트의 처음부터 끝까지 함께합니다.</p>
         </div>
 
         {/* 이메일 대형 텍스트 */}
@@ -45,7 +45,7 @@ function Contact() {
             </p>
             <a
               href='mailto:ysosob@naver.com'
-              className='self-start text-sm tracking-widest text-neutral-900 hover:text-teal-400 transition-colors duration-200'
+              className='self-start text-sm tracking-widest text-neutral-900 hover:text-neutral-900 transition-colors duration-200'
             >
               → 메일 보내기
             </a>

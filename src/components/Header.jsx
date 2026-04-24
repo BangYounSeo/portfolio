@@ -1,6 +1,6 @@
 function Header() {
   return (
-    <header className='fixed top-3 left-0 w-full z-50 flex items-center justify-between px-10 py-3 border-t border-b border-black'>
+    <header className='fixed top-0 left-0 w-full z-50 flex items-center justify-between px-10 py-5 bg-white/40 backdrop-blur-md'>
 
       {/* 좌측: 이름 */}
       <div className='text-sm font-bold tracking-widest text-neutral-900'>
@@ -8,7 +8,7 @@ function Header() {
       </div>
 
       {/* 가운데: 이메일 */}
-      <a 
+      <a
         href='mailto:ysosob@naver.com'
         className='hidden sm:block text-base tracking-widest text-neutral-500 hover:text-neutral-900 transition-colors'
       >

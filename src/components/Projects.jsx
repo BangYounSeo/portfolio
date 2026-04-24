@@ -477,8 +477,8 @@ function ProjectSlider() {
             onClick={() => setCurrent(i)}
             className={`rounded-full transition-all duration-300 ${
               i === current
-                ? 'bg-teal-400 w-6 h-1.5'
-                : 'bg-teal-200 w-1.5 h-1.5 hover:bg-teal-300'
+                ? 'bg-neutral-900 w-6 h-1.5'
+                : 'bg-neutral-300 w-1.5 h-1.5 hover:bg-neutral-500'
             }`}
             aria-label={`프로젝트 ${i + 1}`}
           />
@@ -499,14 +499,14 @@ function Projects() {
   const sliderRef   = useScrollAnimation()
 
   return (
-    <section id='projects' className='w-full bg-gradient-to-b from-white to-neutral-100 py-20'>
+    <section id='projects' className='w-full bg-gradient-to-b from-neutral-50 to-neutral-100 py-20'>
       <div className='w-full px-6 sm:px-12 md:px-20'>
 
         {/* 섹션 헤더 */}
-        <div className='flex flex-col sm:flex-row sm:items-end sm:justify-between mb-8 sm:mb-10 border-b border-neutral-300 pb-6 gap-3'>
+        <div className='relative flex flex-col sm:flex-row sm:items-end sm:justify-between mb-8 sm:mb-10 pb-6 gap-3'>
           <div>
             <p ref={headerPRef} className='text-xs tracking-[0.3em] text-neutral-400 uppercase mb-4 fade-up'>02 — Work</p>
-            <h2 ref={headerH2Ref} className='text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[6rem] font-black text-teal-400 leading-none tracking-tighter fade-up'>
+            <h2 ref={headerH2Ref} className='text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[7rem] font-black text-neutral-300 leading-none tracking-tighter fade-up'>
               Projects
             </h2>
           </div>
@@ -515,7 +515,7 @@ function Projects() {
           </p>
         </div>
 
-        <div ref={sliderRef} className='fade-up delay-1'>
+        <div ref={sliderRef} className='relative z-10 -mt-14 sm:-mt-20 md:-mt-32 fade-up delay-1'>
           <ProjectSlider />
         </div>
 

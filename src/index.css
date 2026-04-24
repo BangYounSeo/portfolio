@@ -1,7 +1,9 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 body {
   font-family: 'Noto Sans KR', 'Nunito', sans-serif;
+  background: #ffffff;
+  min-height: 100vh;
 }
 
 .fade-up {
@@ -24,4 +26,19 @@ body {
 @media (max-width: 767px) {
   .fade-up.delay-10 { transition-delay: 0.2s; }
   .fade-up.delay-12 { transition-delay: 0.4s; }
+}
+
+@keyframes marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 90s linear infinite;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
 }

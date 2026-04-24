@@ -27,10 +27,10 @@ function Hero() {
   }, [])
 
   return (
-    <section className='relative w-full h-[calc(100vh-64px)] mt-18 bg-neutral-200 flex flex-col items-center justify-center overflow-hidden'>
+    <section className='relative w-full h-screen bg-neutral-200 flex flex-col items-center justify-center overflow-hidden'>
       <div className='relative z-10 flex flex-col items-center gap-1'>
         <p
-          className='text-xs sm:text-sm tracking-[0.3em] text-teal-400 font-medium uppercase transition-opacity duration-700'
+          className='text-xs sm:text-sm tracking-[0.3em] text-neutral-900 font-medium uppercase transition-opacity duration-700'
           style={{ opacity: visibleCount > 0 ? 1 : 0 }}
         >
           Front-end &amp; Web Designer
